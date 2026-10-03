@@ -22,6 +22,7 @@
             width: 300px;
             height: 100px;
             border-radius: 800px;
+            cursor: pointer;
             transition: background-color 0.5s ease;
         }
         #button.night{
@@ -29,7 +30,7 @@
         }
         #button.night #sun{
             left: 84%;
-            background-color: rgb(120,120,120)
+            background-color: rgb(140,140,140)
         }
         #sun{
             position: fixed;
@@ -40,7 +41,6 @@
             width: 80px;
             height: 80px;
             border-radius: 50%;
-            cursor: pointer;
             transition: left 0.5s ease,
             background-color 0.5s ease;
         }
@@ -52,9 +52,8 @@
     </div>
     <script>
         let button = document.getElementById("button");
-        let sun = document.getElementById("sun");
         let bg = document.body;
-        sun.onclick = () => {
+        button.onclick = () => {
             button.classList.toggle("night");
             bg.classList.toggle("night");
         }
